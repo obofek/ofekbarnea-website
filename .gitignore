@@ -1,0 +1,7 @@
+.claude/
+.DS_Store
+Thumbs.db
+*.tmp
+*.mp4
+images/screenshots landing page/
+images/*- Copy.*
