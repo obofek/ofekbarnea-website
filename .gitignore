@@ -3,5 +3,6 @@
 Thumbs.db
 *.tmp
 *.mp4
+!images/landing-video.mp4
 images/screenshots landing page/
 images/*- Copy.*
