@@ -262,7 +262,7 @@ function renderEpisodes(sort) {
         '</div>' +
       '</div>' +
       '<a href="https://www.youtube.com/watch?v=' + safeId + '" target="_blank" rel="noopener noreferrer" class="pc-episode-thumb">' +
-        '<img src="https://img.youtube.com/vi/' + safeId + '/hqdefault.jpg" alt="' + safeTitle + '" loading="lazy" />' +
+        '<img src="https://img.youtube.com/vi/' + safeId + '/maxresdefault.jpg" alt="' + safeTitle + '" loading="lazy" onerror="this.onerror=null;this.src=\'https://img.youtube.com/vi/' + safeId + '/hqdefault.jpg\'" />' +
         '<div class="pc-thumb-play"><i class="fa-solid fa-play"></i></div>' +
       '</a>' +
     '</div>';
