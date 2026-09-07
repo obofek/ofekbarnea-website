@@ -40,7 +40,25 @@ const events = [
     location: 'מרכז METRO, שוהם',
     price: '',                    // ללא מחיר מוצג
     image: EVENT_IMG_PLACEHOLDER, // זמני — ממתין לתמונת הסדנה
-    ticketUrl: '#',               // ממתין ללינק לדף הרכישה → הכפתור במצב "בקרוב"
+    ticketUrl: 'https://pay.grow.link/OTY5NjI~d86c5c8e02ea3e8a8b9c6f8581517590-MzkwMTEyNA',
+    description: 'בעצם לומדים את הכללים, איך לשחק את המשחק ואיך ליישם את הדברים בזמן אמת. הכל כדי שבבוא העת, הפחד מהחוק ואי הוודאות לא יהיו פקטורים במשוואה.',
+    whatIncluded: WORKSHOP_WHAT,
+    terms: WORKSHOP_TERMS
+  },
+
+  {
+    id: 'haifa-2026-10-23',
+    title: 'סדנת "חמוש בארצנו" – חיפה',
+    subtitle: 'מה מותר, מה אסור ואיך מקבלים החלטה בזמן אמת כאזרח חמוש',
+    date: '2026-10-23',
+    dateText: '',
+    time: '09:00',
+    scheduleNote: '08:30 התכנסות · 09:00 מתחילים',
+    duration: '3–4 שעות',
+    location: 'בית אבא חושי, חיפה',
+    price: '',
+    image: EVENT_IMG_PLACEHOLDER, // זמני — ממתין לתמונת הסדנה
+    ticketUrl: 'https://pay.grow.link/OTY5NjI~c63a7ab3de8125bd0708be0c5233d82b-Mzk1OTg0Nw',
     description: 'בעצם לומדים את הכללים, איך לשחק את המשחק ואיך ליישם את הדברים בזמן אמת. הכל כדי שבבוא העת, הפחד מהחוק ואי הוודאות לא יהיו פקטורים במשוואה.',
     whatIncluded: WORKSHOP_WHAT,
     terms: WORKSHOP_TERMS
