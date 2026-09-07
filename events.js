@@ -39,7 +39,8 @@ const events = [
     duration: '3–4 שעות',
     location: 'מרכז METRO, שוהם',
     price: '',                    // ללא מחיר מוצג
-    image: EVENT_IMG_PLACEHOLDER, // זמני — ממתין לתמונת הסדנה
+    image: EVENT_IMG_PLACEHOLDER, // תמונה ראשית (האקדח הכחול)
+    gallery: ['images/ofek-lecture.jpeg'], // "השאר" — תמונות מהסדנה שמופיעות בעמוד האירוע
     ticketUrl: 'https://pay.grow.link/OTY5NjI~d86c5c8e02ea3e8a8b9c6f8581517590-MzkwMTEyNA',
     description: 'בעצם לומדים את הכללים, איך לשחק את המשחק ואיך ליישם את הדברים בזמן אמת. הכל כדי שבבוא העת, הפחד מהחוק ואי הוודאות לא יהיו פקטורים במשוואה.',
     whatIncluded: WORKSHOP_WHAT,
@@ -57,7 +58,8 @@ const events = [
     duration: '3–4 שעות',
     location: 'בית אבא חושי, חיפה',
     price: '',
-    image: EVENT_IMG_PLACEHOLDER, // זמני — ממתין לתמונת הסדנה
+    image: EVENT_IMG_PLACEHOLDER, // תמונה ראשית (האקדח הכחול)
+    gallery: ['images/ofek-lecture.jpeg'], // "השאר" — תמונות מהסדנה שמופיעות בעמוד האירוע
     ticketUrl: 'https://pay.grow.link/OTY5NjI~c63a7ab3de8125bd0708be0c5233d82b-Mzk1OTg0Nw',
     description: 'בעצם לומדים את הכללים, איך לשחק את המשחק ואיך ליישם את הדברים בזמן אמת. הכל כדי שבבוא העת, הפחד מהחוק ואי הוודאות לא יהיו פקטורים במשוואה.',
     whatIncluded: WORKSHOP_WHAT,
@@ -193,6 +195,13 @@ function detailMetaRow(icon, value, label) {
     (label ? '<b>' + label + '</b>' : '') + escapeHtml(value) + '</span></div>';
 }
 
+function evSwapImg(el) {
+  var main = document.querySelector('.ev-detail-main-img');
+  if (main) main.src = el.src;
+  document.querySelectorAll('.ev-thumb').forEach(function (t) { t.classList.remove('active'); });
+  el.classList.add('active');
+}
+
 function renderEventDetail() {
   var host = document.getElementById('event-detail');
   if (!host) return;
@@ -236,6 +245,15 @@ function renderEventDetail() {
     ? '<span class="ev-detail-badge sold">אזלו הכרטיסים</span>'
     : '<span class="ev-detail-badge">אירוע קרוב</span>';
 
+  var allImages = [ev.image].concat(ev.gallery || []);
+  var galleryHtml = '';
+  if (allImages.length > 1) {
+    galleryHtml = '<div class="ev-gallery">' + allImages.map(function (src, i) {
+      return '<img class="ev-thumb' + (i === 0 ? ' active' : '') + '" src="' +
+        encodeURI(src) + '" alt="' + escapeHtml(ev.title) + '" loading="lazy" onclick="evSwapImg(this)" />';
+    }).join('') + '</div>';
+  }
+
   var hasTicket = ev.ticketUrl && ev.ticketUrl !== '#';
   var ctaHtml;
   if (ev.soldOut) {
@@ -263,7 +281,8 @@ function renderEventDetail() {
         ctaHtml +
       '</div>' +
       '<div class="ev-detail-media">' +
-        '<img src="' + img + '" alt="' + escapeHtml(ev.title) + '" />' +
+        '<img class="ev-detail-main-img" src="' + img + '" alt="' + escapeHtml(ev.title) + '" />' +
+        galleryHtml +
       '</div>' +
     '</div>';
 
