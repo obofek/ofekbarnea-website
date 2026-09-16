@@ -42,6 +42,7 @@ const events = [
     image: EVENT_IMG_PLACEHOLDER, // תמונה ראשית (האקדח הכחול)
     gallery: ['images/ofek-lecture.jpeg'], // "השאר" — תמונות מהסדנה שמופיעות בעמוד האירוע
     ticketUrl: 'https://pay.grow.link/OTY5NjI~d86c5c8e02ea3e8a8b9c6f8581517590-MzkwMTEyNA',
+    soldOut: true,
     description: 'בעצם לומדים את הכללים, איך לשחק את המשחק ואיך ליישם את הדברים בזמן אמת. הכל כדי שבבוא העת, הפחד מהחוק ואי הוודאות לא יהיו פקטורים במשוואה.',
     whatIncluded: WORKSHOP_WHAT,
     terms: WORKSHOP_TERMS
@@ -77,8 +78,9 @@ const events = [
     duration: 'כשעתיים וחצי',
     location: 'מרכז METRO, שוהם',
     price: '',
-    image: EVENT_IMG_PLACEHOLDER, // תמונה ראשית (זמנית) — ממתין לתמונת דייב שטרן
-    ticketUrl: '#',               // ממתין ללינק לרכישה → כפתור "בקרוב"
+    image: 'images/dave-stern-workshop.png', // תמונה ראשית — דייב שטרן
+    gallery: [EVENT_IMG_PLACEHOLDER],         // האקדח הכחול בגלריה
+    ticketUrl: 'https://pay.grow.link/OTY5NjI~c0339fdf4ba21c26054a667c7fea970d-NDAwNDM3NQ',
     description: [
       'הדרכה משולבת לאזרחים חמושים בהנחיית דייב שטרן ואופק ברנע.',
       'במטווח אתם יודעים איפה המטרה, מתי מתחיל התרגיל ומה מצופה מכם. באירוע אמת התמונה אחרת: המציאות אינה ברורה, הגוף נכנס לסטרס, אנשים נמצאים סביבכם, ובתוך שניות אתם נדרשים לזהות את האיום, לבחור כיצד להגיב ולקבל החלטה טקטית ומשפטית שיכולה לקבוע כיצד האירוע יסתיים.',
