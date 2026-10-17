@@ -62,6 +62,7 @@ const events = [
     image: EVENT_IMG_PLACEHOLDER, // תמונה ראשית (האקדח הכחול)
     gallery: ['images/ofek-lecture.jpeg'], // "השאר" — תמונות מהסדנה שמופיעות בעמוד האירוע
     ticketUrl: 'https://pay.grow.link/OTY5NjI~c63a7ab3de8125bd0708be0c5233d82b-Mzk1OTg0Nw',
+    soldOut: true,
     description: 'בעצם לומדים את הכללים, איך לשחק את המשחק ואיך ליישם את הדברים בזמן אמת. הכל כדי שבבוא העת, הפחד מהחוק ואי הוודאות לא יהיו פקטורים במשוואה.',
     whatIncluded: WORKSHOP_WHAT,
     terms: WORKSHOP_TERMS
