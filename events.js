@@ -79,7 +79,7 @@ const events = [
     duration: 'כשעתיים וחצי',
     location: 'מרכז METRO, שוהם',
     price: '',
-    image: 'images/dave-stern-ofek.webp', // תמונה ראשית — דייב שטרן ואופק
+    image: 'images/dave-stern-workshop.png', // תמונה ראשית — דייב שטרן
     gallery: [EVENT_IMG_PLACEHOLDER],         // האקדח הכחול בגלריה
     ticketUrl: 'https://pay.grow.link/OTY5NjI~c0339fdf4ba21c26054a667c7fea970d-NDAwNDM3NQ',
     soldOut: true,
