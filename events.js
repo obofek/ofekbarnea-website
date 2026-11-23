@@ -231,7 +231,7 @@ const events = [
     price: '',
     image: 'images/dave-stern-ofek.webp', // תמונה ראשית — דייב שטרן ואופק
     gallery: [EVENT_IMG_PLACEHOLDER],         // האקדח הכחול בגלריה
-    ticketUrl: '',                            // אין עדיין לינק — ״ההרשמה תיפתח בקרוב״
+    ticketUrl: 'https://pay.grow.link/OTY5NjI~a6ae8f3b26f38418e0fafeec39d7a7c5-NDMyNjIwMA',
     soldOut: false,
     description: [
       'הדרכה משולבת לנשים חמושות בלבד, בהנחיית דייב שטרן ואופק ברנע.',
@@ -318,7 +318,7 @@ const events = [
       },
       {
         title: 'לשאלות והרשמה',
-        body: 'ההרשמה תיפתח בקרוב. לשאלות: WhatsApp 053-5824942. מספר המקומות מוגבל — לאחר מילוי הקבוצה ההרשמה תיסגר.'
+        body: 'להרשמה, מלאו את הפרטים והשלימו את התשלום. לשאלות: WhatsApp 053-5824942. מספר המקומות מוגבל — לאחר מילוי הקבוצה ההרשמה תיסגר.'
       }
     ]
   }
